@@ -2,9 +2,9 @@ import { App } from 'vue'
 import Button from './src/button.vue'
 // import ButtonGroup from './src/button-group.vue'
 
-export default (app: App): void => {
+Button.install = function (app: App): void {
 	app.component(Button.name, Button)
-	//   app.component(ButtonGroup.name, ButtonGroup)
+	// app.component(ButtonGroup.name, ButtonGroup)
 }
 
-export { Button }
+export default Button

@@ -1,122 +1,199 @@
 <template>
-	<button
-		:class="[
-			'el-button',
-			type ? 'el-button--' + type : '',
-			buttonSize ? 'el-button--' + buttonSize : '',
-			{
-				'is-disabled': buttonDisabled,
-				'is-loading': loading,
-				'is-plain': plain,
-				'is-round': round,
-				'is-circle': circle
-			}
-		]"
-		:disabled="buttonDisabled || loading"
-		:autofocus="autofocus"
-		:type="nativeType"
-		@click="handleClick"
-	>
-		<i v-if="loading" class="el-icon-loading"></i>
-		<i v-if="icon && !loading" :class="icon"></i>
-		<span v-if="$slots.default"><slot></slot></span>
+	<button class="gulu-button" :class="classes" :disabled="disabled">
+		<span v-if="loading" class="gulu-loadingIndicator"></span>
+		<slot />
 	</button>
 </template>
 
-<script lang="ts">
-import { computed, inject, defineComponent, PropType } from 'vue'
-type IButtonType = PropType<'primary' | 'success' | 'warning' | 'danger' | 'info' | 'text' | 'default'>
-type IButtonSize = PropType<'medium' | 'small' | 'mini'>
-type IButtonNativeType = PropType<'button' | 'submit' | 'reset'>
-const ELEMENT: {
-	size?: number
-} = {}
-// TODOS: replace these interface definition with actual ElForm interface
-interface ElForm {
+<script lang="ts" setup="props">
+import { computed } from 'vue'
+declare const props: {
+	theme?: 'button' | 'text' | 'link'
+	size?: 'normal' | 'big' | 'small'
+	level?: 'normal' | 'main' | 'danger'
 	disabled: boolean
-}
-interface ElFormItem {
-	elFormItemSize: number
-}
-interface IButtonProps {
-	type: string
-	size: string
-	icon: string
-	nativeType: string
 	loading: boolean
-	disabled: boolean
-	plain: boolean
-	autofocus: boolean
-	round: boolean
-	circle: boolean
 }
-type EmitFn = (evt: Event) => void
-interface IButtonSetups {
-	elFormItemSize_: number
-	buttonSize: string
-	buttonDisabled: boolean
-	handleClick: EmitFn
-}
-export default defineComponent({
-	name: 'ElButton',
+export default {
 	props: {
-		type: {
-			type: String as IButtonType,
-			default: 'default',
-			validator: (val: string) => {
-				return ['default', 'primary', 'success', 'warning', 'info', 'danger', 'text'].includes(val)
-			}
+		theme: {
+			type: String,
+			default: 'button'
 		},
 		size: {
-			type: String as IButtonType,
-			validator: (val: string) => {
-				return ['medium', 'small', 'mini'].includes(val)
-			}
-		},
-		icon: {
 			type: String,
-			default: ''
+			default: 'normal'
 		},
-		nativeType: {
-			type: String as IButtonNativeType,
-			default: 'button',
-			validator: (val: string) => {
-				return ['button', 'submit', 'reset'].includes(val)
-			}
+		level: {
+			type: String,
+			default: 'normal'
 		},
-		loading: Boolean,
-		disabled: Boolean,
-		plain: Boolean,
-		autofocus: Boolean,
-		round: Boolean,
-		circle: Boolean
-	},
-	emits: ['click'],
-	setup(props, ctx) {
-		// inject
-		const elForm = inject<ElForm>('elForm', {} as any)
-		const elFormItem = inject<ElFormItem>('elFormItem', {} as any)
-		// computed
-		const elFormItemSize_ = computed(() => {
-			return (elFormItem || {}).elFormItemSize
-		})
-		const buttonSize = computed(() => {
-			// todo ELEMENT
-			return props.size || elFormItemSize_.value || (ELEMENT || {}).size
-		})
-		const buttonDisabled = computed(() => {
-			return props.disabled || (elForm || {}).disabled
-		})
-		//methods
-		const handleClick = (evt) => {
-			ctx.emit('click', evt)
+		disabled: {
+			type: Boolean,
+			default: false
+		},
+		loading: {
+			type: Boolean,
+			default: false
 		}
-		return {
-			elFormItemSize_,
-			buttonSize,
-			buttonDisabled,
-			handleClick
-		}
+	}
+}
+const { theme, size, level } = props
+export const classes = computed(() => {
+	return {
+		[`gulu-theme-${theme}`]: theme,
+		[`gulu-size-${size}`]: size,
+		[`gulu-level-${level}`]: level
 	}
 })
 </script>
+
+<style lang="scss">
+$h: 32px;
+$border-color: #d9d9d9;
+$color: #333;
+$blue: #40a9ff;
+$radius: 4px;
+$red: red;
+$grey: grey;
+.gulu-button {
+	box-sizing: border-box;
+	height: $h;
+	padding: 0 12px;
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	white-space: nowrap;
+	background: white;
+	color: $color;
+	border: 1px solid $border-color;
+	border-radius: $radius;
+	box-shadow: 0 1px 0 fade-out(black, 0.95);
+	transition: background 250ms;
+	& + & {
+		margin-left: 8px;
+	}
+	&:hover,
+	&:focus {
+		color: $blue;
+		border-color: $blue;
+	}
+	&:focus {
+		outline: none;
+	}
+	&::-moz-focus-inner {
+		border: 0;
+	}
+	&.gulu-theme-link {
+		border-color: transparent;
+		box-shadow: none;
+		color: $blue;
+		&:hover,
+		&:focus {
+			color: lighten($blue, 10%);
+		}
+	}
+	&.gulu-theme-text {
+		border-color: transparent;
+		box-shadow: none;
+		color: inherit;
+		&:hover,
+		&:focus {
+			background: darken(white, 5%);
+		}
+	}
+	&.gulu-size-big {
+		font-size: 24px;
+		height: 48px;
+		padding: 0 16px;
+	}
+	&.gulu-size-small {
+		font-size: 12px;
+		height: 20px;
+		padding: 0 4px;
+	}
+	&.gulu-theme-button {
+		&.gulu-level-main {
+			background: $blue;
+			color: white;
+			border-color: $blue;
+			&:hover,
+			&:focus {
+				background: darken($blue, 10%);
+				border-color: darken($blue, 10%);
+			}
+		}
+		&.gulu-level-danger {
+			background: $red;
+			border-color: $red;
+			color: white;
+			&:hover,
+			&:focus {
+				background: darken($red, 10%);
+				border-color: darken($red, 10%);
+			}
+		}
+	}
+	&.gulu-theme-link {
+		&.gulu-level-danger {
+			color: $red;
+			&:hover,
+			&:focus {
+				color: darken($red, 10%);
+			}
+		}
+	}
+	&.gulu-theme-text {
+		&.gulu-level-main {
+			color: $blue;
+			&:hover,
+			&:focus {
+				color: darken($blue, 10%);
+			}
+		}
+		&.gulu-level-danger {
+			color: $red;
+			&:hover,
+			&:focus {
+				color: darken($red, 10%);
+			}
+		}
+	}
+	&.gulu-theme-button {
+		&[disabled] {
+			cursor: not-allowed;
+			color: $grey;
+			&:hover {
+				border-color: $grey;
+			}
+		}
+	}
+	&.gulu-theme-link,
+	&.gulu-theme-text {
+		&[disabled] {
+			cursor: not-allowed;
+			color: $grey;
+		}
+	}
+	> .gulu-loadingIndicator {
+		width: 14px;
+		height: 14px;
+		display: inline-block;
+		margin-right: 4px;
+		border-radius: 8px;
+		border-color: $blue $blue $blue transparent;
+		border-style: solid;
+		border-width: 2px;
+		animation: gulu-spin 1s infinite linear;
+	}
+}
+@keyframes gulu-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+</style>
