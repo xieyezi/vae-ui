@@ -14,7 +14,7 @@ import {Button, Tabs, Tab, Switch, Dialog, openDialog} from "vae-ui"
 
 代码示例：
 
-```
+```vue
 <template>
   <div>
     <Button>按钮</Button>

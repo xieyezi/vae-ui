@@ -9,7 +9,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
-		"format": "prettier --write \"src/**/*.vue\" \"src/**/*.ts\""
+		"format": "prettier --write \"packages/**/*.vue\" \"packages/**/*.ts\" \"website/**/*.vue\" \"website/**/*.ts\""
 	},
 	"resolutions": {
 		"node-sass": "npm:sass@^1.26.11"
