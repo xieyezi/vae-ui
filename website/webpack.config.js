@@ -1,32 +1,39 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
+const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const isProd = process.env.NODE_ENV === 'production'
-const isPlay = !!process.env.PLAY_ENV
 
 const babelOptions = {
 	plugins: ['@vue/babel-plugin-jsx']
 }
 
-const config = {
+module.exports = {
 	mode: isProd ? 'production' : 'development',
-	devtool: !isProd && 'cheap-module-eval-source-map',
-	entry: isPlay ? path.resolve(__dirname, './play.js') : path.resolve(__dirname, './entry.js'),
+	entry: path.resolve(__dirname, './entry.ts'),
 	output: {
 		path: path.resolve(__dirname, '../website-dist'),
-		publicPath: '/',
+		publicPath: '',
 		filename: isProd ? '[name].[hash].js' : '[name].js'
 	},
-	stats: 'verbose',
+	devServer: {
+		port: 8085,
+		publicPath: '/',
+		hot: true
+	},
+	performance: {
+		hints: false
+	},
+	stats: {
+		children: false
+	},
 	module: {
 		rules: [
 			{
 				test: /\.vue$/,
-				use: 'vue-loader'
+				loader: 'vue-loader'
 			},
 			{
 				test: /\.ts$/,
@@ -37,33 +44,33 @@ const config = {
 					transpileOnly: true
 				}
 			},
-			{
-				test: /\.tsx$/,
-				exclude: /node_modules/,
-				use: [
-					{
-						loader: 'babel-loader',
-						options: babelOptions
-					},
-					{
-						loader: 'ts-loader',
-						options: {
-							appendTsxSuffixTo: [/\.vue$/],
-							transpileOnly: true
-						}
-					}
-				]
-			},
-			{
-				test: /\.js(x?)$/,
-				exclude: /node_modules/,
-				use: [
-					{
-						loader: 'babel-loader',
-						options: babelOptions
-					}
-				]
-			},
+			// {
+			// 	test: /\.tsx$/,
+			// 	exclude: /node_modules/,
+			// 	use: [
+			// 		{
+			// 			loader: 'babel-loader',
+			// 			options: babelOptions
+			// 		},
+			// 		{
+			// 			loader: 'ts-loader',
+			// 			options: {
+			// 				appendTsxSuffixTo: [/\.vue$/],
+			// 				transpileOnly: true
+			// 			}
+			// 		}
+			// 	]
+			// },
+			// {
+			// 	test: /\.js(x?)$/,
+			// 	exclude: /node_modules/,
+			// 	use: [
+			// 		{
+			// 			loader: 'babel-loader',
+			// 			options: babelOptions
+			// 		}
+			// 	]
+			// },
 			{
 				test: /\.md$/,
 				use: [
@@ -81,13 +88,8 @@ const config = {
 				]
 			},
 			{
-				test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
-				loader: 'url-loader',
-
-				query: {
-					limit: 10000,
-					name: path.posix.join('static', '[name].[hash:7].[ext]')
-				}
+				test: /\.(scss|css)$/,
+				use: ['style-loader', 'css-loader', 'sass-loader']
 			}
 		]
 	},
@@ -96,7 +98,8 @@ const config = {
 		alias: {
 			vue: '@vue/runtime-dom',
 			examples: path.resolve(__dirname)
-		}
+		},
+		modules: ['node_modules']
 	},
 	plugins: [
 		new VueLoaderPlugin(),
@@ -104,43 +107,12 @@ const config = {
 			template: './website/index.html',
 			filename: './index.html',
 			favicon: './website/favicon.ico'
-		})
+		}),
+		new webpack.HotModuleReplacementPlugin()
 		// new BundleAnalyzerPlugin(),
 	],
-	devServer: {
-        port: 8085,
-		inline: true,
-		hot: true,
-		stats: 'minimal',
-		publicPath: '/',
-		contentBase: __dirname,
-		overlay: true
-	}
+	optimization: {
+		minimizer: []
+	},
+	devtool: '#eval-source-map'
 }
-
-const cssRule = {
-	test: /\.(sass|scss|css)$/,
-	use: [
-		'css-loader',
-		{
-			loader: 'sass-loader',
-			options: {
-				implementation: require('sass')
-			}
-		}
-	]
-}
-
-if (isProd) {
-	config.plugins.push(
-		new MiniCssExtractPlugin({
-			filename: '[name].[contenthash].css',
-			chunkFilename: '[id].[contenthash].css'
-		})
-	)
-	cssRule.use.unshift(MiniCssExtractPlugin.loader)
-} else {
-	cssRule.use.unshift('style-loader')
-}
-config.module.rules.push(cssRule)
-module.exports = config

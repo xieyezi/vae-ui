@@ -1,0 +1,20 @@
+[
+  {
+    "groupName": "Basic",
+    "list": [
+      {
+        "path": "/layout",
+        "title": "Layout 布局"
+      }
+    ]
+  },
+  {
+    "groupName": "Notice",
+    "list": [
+      {
+        "path": "/alert",
+        "title": "Alert 警告"
+      }
+    ]
+  }
+]
