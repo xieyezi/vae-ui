@@ -12,23 +12,15 @@ const babelOptions = {
 
 module.exports = {
 	mode: isProd ? 'production' : 'development',
+	devtool: !isProd && 'cheap-module-eval-source-map',
 	entry: path.resolve(__dirname, './entry.ts'),
 	output: {
 		path: path.resolve(__dirname, '../website-dist'),
 		publicPath: '',
 		filename: isProd ? '[name].[hash].js' : '[name].js'
 	},
-	devServer: {
-		port: 8085,
-		publicPath: '/',
-		hot: true
-	},
-	performance: {
-		hints: false
-	},
-	stats: {
-		children: false
-	},
+
+	stats: 'verbose',
 	module: {
 		rules: [
 			{
@@ -111,8 +103,13 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin()
 		// new BundleAnalyzerPlugin(),
 	],
-	optimization: {
-		minimizer: []
-	},
-	devtool: '#eval-source-map'
+	devServer: {
+		port: 8085,
+		inline: true,
+		hot: true,
+		stats: 'minimal',
+		publicPath: '/',
+		contentBase: __dirname,
+		overlay: true
+	}
 }

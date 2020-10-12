@@ -12,12 +12,10 @@ interface RouterItem {
 }
 
 function loadDoc(name: string) {
-	return defineAsyncComponent(() => import(`./components${name}.md`))
+	return () => import(`./components${name}.md`)
 }
 
 function registerRoutes(navs: Array<NavItem>) {
-	console.log(navs)
-
 	let routes = []
 	navs.forEach((nav) => {
 		if (nav.list) {
