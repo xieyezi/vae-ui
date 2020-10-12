@@ -1,5 +1,4 @@
 import navConfig from './nav.config.json'
-import { defineAsyncComponent } from 'vue'
 
 interface NavItem {
 	groupName?: string
@@ -21,7 +20,6 @@ function registerRoutes(navs: Array<NavItem>) {
 		if (nav.list) {
 			nav.list.forEach((page) => {
 				let item = null
-				console.log(page.path)
 				if (page.path === '/layout') {
 					item = {
 						path: page.path,
