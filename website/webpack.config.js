@@ -10,7 +10,7 @@ const babelOptions = {
 	plugins: ['@vue/babel-plugin-jsx']
 }
 
-module.exports = {
+const config = {
 	mode: isProd ? 'production' : 'development',
 	devtool: !isProd && 'cheap-module-eval-source-map',
 	entry: path.resolve(__dirname, './entry.ts'),
@@ -19,8 +19,12 @@ module.exports = {
 		publicPath: '',
 		filename: isProd ? '[name].[hash].js' : '[name].js'
 	},
-
-	stats: 'verbose',
+	performance: {
+		hints: false
+	},
+	stats: {
+		children: false
+	},
 	module: {
 		rules: [
 			{
@@ -80,8 +84,12 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(scss|css)$/,
-				use: ['style-loader', 'css-loader', 'sass-loader']
+				test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
+				loader: 'url-loader',
+				query: {
+					limit: 10000,
+					name: path.posix.join('static', '[name].[hash:7].[ext]')
+				}
 			}
 		]
 	},
@@ -105,11 +113,35 @@ module.exports = {
 	],
 	devServer: {
 		port: 8085,
-		inline: true,
-		hot: true,
-		stats: 'minimal',
 		publicPath: '/',
-		contentBase: __dirname,
-		overlay: true
+		hot: true
 	}
 }
+
+const cssRule = {
+	test: /\.(sass|scss|css)$/,
+	use: [
+		'css-loader',
+		{
+			loader: 'sass-loader',
+			options: {
+				implementation: require('sass')
+			}
+		}
+	]
+}
+
+if (isProd) {
+	config.plugins.push(
+		new MiniCssExtractPlugin({
+			filename: '[name].[contenthash].css',
+			chunkFilename: '[id].[contenthash].css'
+		})
+	)
+	cssRule.use.unshift(MiniCssExtractPlugin.loader)
+} else {
+	cssRule.use.unshift('style-loader')
+}
+config.module.rules.push(cssRule)
+
+module.exports = config

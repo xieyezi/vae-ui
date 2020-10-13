@@ -1,9 +1,19 @@
-## Alert警告提示
+## 禁用状态
 
-:::demo Alert 组件提供四种主题，由type属性指定，默认值为info。
+:::demo 通过 `disabled` 属性指定是否禁用 input 组件
+
 ```html
-<template>
-  <button type="button">click me</button>
-</template>
+<el-input placeholder="请输入内容" v-model="input" :disabled="true"> </el-input>
+
+<script>
+	export default {
+		data() {
+			return {
+				input: ''
+			}
+		}
+	}
+</script>
 ```
+
 :::

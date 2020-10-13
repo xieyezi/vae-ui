@@ -1,20 +1,20 @@
 [
-  {
-    "groupName": "Basic",
-    "list": [
-      {
-        "path": "/layout",
-        "title": "Layout 布局"
-      }
-    ]
-  },
-  {
-    "groupName": "Notice",
-    "list": [
-      {
-        "path": "/alert",
-        "title": "Alert 警告"
-      }
-    ]
-  }
+	{
+		"groupName": "Basic",
+		"list": [
+			{
+				"path": "/test",
+				"title": "Vue 测试"
+			}
+		]
+	},
+	{
+		"groupName": "Notice",
+		"list": [
+			{
+				"path": "/alert",
+				"title": "Alert 警告"
+			}
+		]
+	}
 ]

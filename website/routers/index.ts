@@ -11,7 +11,7 @@ interface RouterItem {
 }
 
 function loadDoc(name: string) {
-	return () => import(`./components${name}.md`)
+	return () => import(`../components${name}.md`)
 }
 
 function registerRoutes(navs: Array<NavItem>) {
@@ -27,7 +27,7 @@ function registerRoutes(navs: Array<NavItem>) {
 							title: page.title,
 							description: page.description
 						},
-						component: () => import('../components/alert.vue')
+						component: () => import('../components/test.vue')
 					}
 				} else {
 					item = {
