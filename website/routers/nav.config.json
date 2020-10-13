@@ -16,5 +16,14 @@
 				"title": "Alert 警告"
 			}
 		]
+	},
+	{
+		"groupName": "Layout",
+		"list": [
+			{
+				"path": "/layout",
+				"title": "Layout"
+			}
+		]
 	}
 ]

@@ -11,7 +11,7 @@ interface RouterItem {
 }
 
 function loadDoc(name: string) {
-	return () => import(`../components${name}.md`)
+	return () => import(`../docs${name}.md`)
 }
 
 function registerRoutes(navs: Array<NavItem>) {
@@ -19,25 +19,18 @@ function registerRoutes(navs: Array<NavItem>) {
 	navs.forEach((nav) => {
 		if (nav.list) {
 			nav.list.forEach((page) => {
-				let item = null
+				let item = {
+					path: page.path,
+					meta: {
+						title: page.title,
+						description: page.description
+					},
+					component: null
+				}
 				if (page.path === '/test') {
-					item = {
-						path: page.path,
-						meta: {
-							title: page.title,
-							description: page.description
-						},
-						component: () => import('../components/test.vue')
-					}
+					item.component = () => import('../components/test.vue')
 				} else {
-					item = {
-						path: page.path,
-						meta: {
-							title: page.title,
-							description: page.description
-						},
-						component: loadDoc(page.path)
-					}
+					item.component = loadDoc(page.path)
 				}
 				routes.push(item)
 			})
