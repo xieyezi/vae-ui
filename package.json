@@ -28,7 +28,7 @@
 		"rollup-plugin-vue": "^6.0.0-beta.10",
 		"sass": "^1.26.11",
 		"typescript": "^4.0.2",
-		"vite": "^1.0.0-rc.1",
+		"vite": "^1.0.0-rc.9",
 		"vite-plugin-vuedoc": "^0.0.10"
 	}
 }
