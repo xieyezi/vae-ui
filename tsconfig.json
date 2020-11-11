@@ -1,9 +1,9 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": false,
-    "jsx": "preserve",
-    "moduleResolution": "node"
-  }
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"strict": false,
+		"jsx": "preserve",
+		"moduleResolution": "node"
+	}
 }
