@@ -4,7 +4,7 @@
     <div class="source">
       <slot name="source"></slot>
     </div>
-    <!-- <div class="meta" ref="meta">
+    <div class="meta" ref="meta">
       <div class="description" v-if="false">
         <slot></slot>
       </div>
@@ -23,7 +23,7 @@
       <transition name="text-slide">
         <span v-show="true">{{ controlText }}</span>
       </transition>
-    </div> -->
+    </div>
   </div>
 </template>
 

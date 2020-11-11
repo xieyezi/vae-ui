@@ -1,7 +1,7 @@
 ## Alert 警告
 
 用于页面中展示重要的提示信息。
-测试markdown文档渲染 vue 组件
+测试 markdown 文档渲染 vue 组件
 
 ### 基本用法
 
@@ -10,12 +10,14 @@
 :::demo Alert 组件提供四种主题，由`type`属性指定，默认值为`info`。
 
 ```html
-<template>
-	<el-alert title="成功提示的文案" type="success"> </el-alert>
-	<el-alert title="消息提示的文案" type="info"> </el-alert>
-	<el-alert title="警告提示的文案" type="warning"> </el-alert>
-	<el-alert title="错误提示的文案" type="error"> </el-alert>
-</template>
+<vae-row>
+	<vae-button>默认按钮</vae-button>
+	<vae-button type="primary">主要按钮</vae-button>
+	<vae-button type="success">成功按钮</vae-button>
+	<vae-button type="info">信息按钮</vae-button>
+	<vae-button type="warning">警告按钮</vae-button>
+	<vae-button type="danger">危险按钮</vae-button>
+</vae-row>
 ```
 
 :::
@@ -28,10 +30,10 @@ Alert 组件提供了两个不同的主题：`light`和`dark`。
 
 ```html
 <template>
-	<el-alert title="成功提示的文案" type="success" effect="dark"> </el-alert>
-	<el-alert title="消息提示的文案" type="info" effect="dark"> </el-alert>
-	<el-alert title="警告提示的文案" type="warning" effect="dark"> </el-alert>
-	<el-alert title="错误提示的文案" type="error" effect="dark"> </el-alert>
+	<vae-alert title="成功提示的文案" type="success" effect="dark"> </vae-alert>
+	<vae-alert title="消息提示的文案" type="info" effect="dark"> </vae-alert>
+	<vae-alert title="警告提示的文案" type="warning" effect="dark"> </vae-alert>
+	<vae-alert title="错误提示的文案" type="error" effect="dark"> </vae-alert>
 </template>
 ```
 
@@ -45,16 +47,16 @@ Alert 组件提供了两个不同的主题：`light`和`dark`。
 
 ```html
 <template>
-	<el-alert title="不可关闭的 alert" type="success" :closable="false"> </el-alert>
-	<el-alert title="自定义 close-text" type="info" close-text="知道了"> </el-alert>
-	<el-alert title="设置了回调的 alert" type="warning" @close="hello"> </el-alert>
+	<vae-alert title="不可关闭的 alert" type="success" :closable="false"> </vae-alert>
+	<vae-alert title="自定义 close-text" type="info" close-text="知道了"> </vae-alert>
+	<vae-alert title="设置了回调的 alert" type="warning" @close="hvavaeo"> </vae-alert>
 </template>
 
 <script>
 	export default {
 		methods: {
-			hello() {
-				alert('Hello World!')
+			hvavaeo() {
+				alert('Hvavaeo World!')
 			}
 		}
 	}
@@ -71,10 +73,10 @@ Alert 组件提供了两个不同的主题：`light`和`dark`。
 
 ```html
 <template>
-	<el-alert title="成功提示的文案" type="success" show-icon> </el-alert>
-	<el-alert title="消息提示的文案" type="info" show-icon> </el-alert>
-	<el-alert title="警告提示的文案" type="warning" show-icon> </el-alert>
-	<el-alert title="错误提示的文案" type="error" show-icon> </el-alert>
+	<vae-alert title="成功提示的文案" type="success" show-icon> </vae-alert>
+	<vae-alert title="消息提示的文案" type="info" show-icon> </vae-alert>
+	<vae-alert title="警告提示的文案" type="warning" show-icon> </vae-alert>
+	<vae-alert title="错误提示的文案" type="error" show-icon> </vae-alert>
 </template>
 ```
 
@@ -88,10 +90,10 @@ Alert 组件提供了两个不同的主题：`light`和`dark`。
 
 ```html
 <template>
-	<el-alert title="成功提示的文案" type="success" center show-icon> </el-alert>
-	<el-alert title="消息提示的文案" type="info" center show-icon> </el-alert>
-	<el-alert title="警告提示的文案" type="warning" center show-icon> </el-alert>
-	<el-alert title="错误提示的文案" type="error" center show-icon> </el-alert>
+	<vae-alert title="成功提示的文案" type="success" center show-icon> </vae-alert>
+	<vae-alert title="消息提示的文案" type="info" center show-icon> </vae-alert>
+	<vae-alert title="警告提示的文案" type="warning" center show-icon> </vae-alert>
+	<vae-alert title="错误提示的文案" type="error" center show-icon> </vae-alert>
 </template>
 ```
 
@@ -105,12 +107,12 @@ Alert 组件提供了两个不同的主题：`light`和`dark`。
 
 ```html
 <template>
-	<el-alert
+	<vae-alert
 		title="带辅助性文字介绍"
 		type="success"
 		description="这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰挥发化为灰……"
 	>
-	</el-alert>
+	</vae-alert>
 </template>
 ```
 
@@ -122,29 +124,29 @@ Alert 组件提供了两个不同的主题：`light`和`dark`。
 
 ```html
 <template>
-	<el-alert
+	<vae-button
 		title="成功提示的文案"
 		type="success"
 		description="文字说明文字说明文字说明文字说明文字说明文字说明"
 		show-icon
 	>
-	</el-alert>
-	<el-alert title="消息提示的文案" type="info" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon>
-	</el-alert>
-	<el-alert
+	</vae-alert>
+	<vae-alert title="消息提示的文案" type="info" description="文字说明文字说明文字说明文字说明文字说明文字说明" show-icon>
+	</vae-alert>
+	<vae-alert
 		title="警告提示的文案"
 		type="warning"
 		description="文字说明文字说明文字说明文字说明文字说明文字说明"
 		show-icon
 	>
-	</el-alert>
-	<el-alert
+	</vae-alert>
+	<vae-alert
 		title="错误提示的文案"
 		type="error"
 		description="文字说明文字说明文字说明文字说明文字说明文字说明"
 		show-icon
 	>
-	</el-alert>
+	</vae-alert>
 </template>
 ```
 
