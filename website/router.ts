@@ -11,23 +11,38 @@ import ButtonDemo from './examples/ButtonDemo.vue'
 const history = createWebHashHistory()
 const md = (string) => h(Markdown, { content: string, key: string })
 
+// const router = createRouter({
+// 	history: history,
+// 	routes: [
+// 		{ path: '/', component: Home },
+// 		{
+// 			path: '/doc',
+// 			component: Doc,
+// 			children: [
+// 				{ path: '', redirect: '/doc/intro' },
+// 				{ path: 'intro', component: md(intro) },
+// 				{ path: 'get-started', component: md(getStarted) },
+// 				{ path: 'install', component: md(install) },
+// 				{ path: 'button', component: ButtonDemo }
+// 			]
+// 		}
+// 	]
+// })
 const router = createRouter({
 	history: history,
 	routes: [
-		{ path: '/', component: Home },
 		{
-			path: '/doc',
-			component: Doc,
-			children: [
-				{ path: '', redirect: '/doc/intro' },
-				{ path: 'intro', component: md(intro) },
-				{ path: 'get-started', component: md(getStarted) },
-				{ path: 'install', component: md(install) },
-				{ path: 'button', component: ButtonDemo }
-			]
+			path: '/',
+			component: Home
+		},
+		{
+			path: '/button',
+			name: 'button',
+			component: async () => import('./docs/Button.zh-CN.md')
 		}
 	]
 })
+
 router.afterEach(() => {})
 
 export default router

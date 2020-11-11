@@ -11,9 +11,6 @@
 		"build": "vite build",
 		"format": "prettier --write \"packages/**/*.vue\" \"packages/**/*.ts\" \"website/**/*.vue\" \"website/**/*.ts\""
 	},
-	"resolutions": {
-		"node-sass": "npm:sass@^1.26.11"
-	},
 	"dependencies": {
 		"github-markdown-css": "^4.0.0",
 		"marked": "^1.1.1",
@@ -34,6 +31,7 @@
 		"rollup-plugin-vue": "^6.0.0-beta.10",
 		"sass": "^1.26.11",
 		"typescript": "^4.0.2",
-		"vite": "^1.0.0-rc.1"
+		"vite": "^1.0.0-rc.1",
+		"vite-plugin-vuedoc": "^0.0.10"
 	}
 }
