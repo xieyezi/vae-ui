@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="topnavAndBanner">
-			<Topnav />
+			<!-- <Topnav /> -->
 			<div class="banner">
 				<h1>Vae-UI</h1>
 				<h2>一个风格简约的 Vue3 UI 框架</h2>
@@ -40,10 +40,9 @@
 </template>
 
 <script lang="ts">
-import Topnav from '../components/Topnav.vue'
 export default {
 	components: {
-		Topnav
+		// Topnav
 	}
 }
 </script>
