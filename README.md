@@ -1,10 +1,9 @@
 <p align="center">
   <img width="200px" src="https://i.loli.net/2020/11/12/v2rnIaSzwUkuN5y.png">
 </p>
+<p align="center">Vae UI - A Vue.js 3.0 UI library</p>
 
 Language: English |  [中文简体](https://github.com/xieyezi/vae-ui/blob/main/README-zh.md)
-
-<p align="center">Vae UI - A Vue.js 3.0 UI library</p>
 
 * 💪 Vue 3.0 Composition API
 * 🔥 Written in TypeScript
