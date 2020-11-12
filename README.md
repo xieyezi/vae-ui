@@ -22,4 +22,3 @@ the project will launch website for you to preview all existing component
 ### UI Styles
 
 used the design styles from [rsuite](https://rsuitejs.com/design/default/#artboard1), thank you very much here.
-used the design styles from [rsuite](https://rsuitejs.com/design/default/#artboard1), thank you very much here.
