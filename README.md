@@ -1,6 +1,8 @@
 <p align="center">
-  <img width="100px" src="https://i.loli.net/2020/11/12/v2rnIaSzwUkuN5y.png">
+  <img width="200px" src="https://i.loli.net/2020/11/12/v2rnIaSzwUkuN5y.png">
 </p>
+
+Language: English |  [中文简体](README-ZH.md)
 
 <p align="center">Vae UI - A Vue.js 3.0 UI library</p>
 
@@ -10,7 +12,7 @@
 This project is still under heavy development. Feel free to join us and make your first pull request.
 
 
-## Website preview
+### Website preview
 With command
 ```bash
 $ yarn website-dev
