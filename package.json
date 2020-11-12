@@ -7,7 +7,7 @@
 	"main": "dist/lib/vae.js",
 	"module": "dist/lib/vae.esm.js",
 	"scripts": {
-		"dev": "vite",
+		"website:dev": "vite",
 		"build": "vite build",
 		"format": "prettier --write \"packages/**/*.vue\" \"packages/**/*.ts\" \"website/**/*.vue\" \"website/**/*.ts\""
 	},
