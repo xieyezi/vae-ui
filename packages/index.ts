@@ -1,222 +1,202 @@
-import { App } from 'vue'
-
-// import { default as VaeAffix } from 'vae-ui/affix'
-// import { default as VaeAnchor } from 'vae-ui/anchor'
-// import { default as VaeAutoComplete } from 'vae-ui/auto-complete'
-// import { default as VaeAlert } from 'vae-ui/alert'
-// import { default as VaeAvatar } from 'vae-ui/avatar'
-// import { default as VaeBackTop } from 'vae-ui/back-top'
-// import { default as VaeBadge } from 'vae-ui/badge'
-// import { default as VaeBreadcrumb } from 'vae-ui/breadcrumb'
-import { default as VaeButton } from 'vae-ui/button'
-// import { default as VaeCalendar } from 'vae-ui/calendar'
-// import { default as VaeCard } from 'vae-ui/card'
-// import { default as VaeCollapse } from 'vae-ui/collapse'
-// import { default as VaeCarousel } from 'vae-ui/carousel'
-// import { default as VaeCascader } from 'vae-ui/cascader'
-// import { default as VaeCheckbox } from 'vae-ui/checkbox'
-// import { default as VaeCol } from 'vae-ui/col'
-// import { default as VaeDatePicker } from 'vae-ui/date-picker'
-// import { default as VaeDivider } from 'vae-ui/divider'
-// import { default as VaeDropdown } from 'vae-ui/dropdown'
-// import { default as VaeForm } from 'vae-ui/form'
-// import { default as VaeIcon } from 'vae-ui/icon'
-// import { default as VaeInput } from 'vae-ui/input'
-// import { default as VaeInputNumber } from 'vae-ui/input-number'
-// import { default as VaeLayout } from 'vae-ui/layout'
-// import { default as VaeList } from 'vae-ui/list'
-// import { default as VaeLocaleProvider } from 'vae-ui/locale-provider'
-// import { default as Vaemessage } from 'vae-ui/message'
-// import { default as VaeMenu } from 'vae-ui/menu'
-// import { default as VaeMentions } from 'vae-ui/mentions'
-// import { default as VaeModal } from 'vae-ui/modal'
-// import { default as Vaenotification } from 'vae-ui/notification'
-// import { default as VaePagination } from 'vae-ui/pagination'
-// import { default as VaePopconfirm } from 'vae-ui/popconfirm'
-// import { default as VaePopover } from 'vae-ui/popover'
-// import { default as VaeProgress } from 'vae-ui/progress'
-// import { default as VaeRadio } from 'vae-ui/radio'
-// import { default as VaeRate } from 'vae-ui/rate'
-// import { default as VaeRow } from 'vae-ui/row'
-// import { default as VaeSelect } from 'vae-ui/select'
-// import { default as VaeSlider } from 'vae-ui/slider'
-// import { default as VaeSpin } from 'vae-ui/spin'
-// import { default as VaeStatistic } from 'vae-ui/statistic'
-// import { default as VaeSteps } from 'vae-ui/steps'
-// import { default as VaeSwitch } from 'vae-ui/switch'
-// import { default as VaeTable } from 'vae-ui/table'
-// import { default as VaeTransfer } from 'vae-ui/transfer'
-// import { default as VaeTree } from 'vae-ui/tree'
-// import { default as VaeTreeSelect } from 'vae-ui/tree-select'
-// import { default as VaeTabs } from 'vae-ui/tabs'
-// import { default as VaeTag } from 'vae-ui/tag'
-// import { default as VaeTimePicker } from 'vae-ui/time-picker'
-// import { default as VaeTimeline } from 'vae-ui/timeline'
-// import { default as VaeTooltip } from 'vae-ui/tooltip'
-// // import { default as VaeMention } from 'vae-ui/mention'
-// import { default as VaeUpload } from 'vae-ui/upload'
-// import { default as Vaeversion } from 'vae-ui/version'
-// import { default as VaeDrawer } from 'vae-ui/drawer'
-// import { default as VaeSkeleton } from 'vae-ui/skeleton'
-// import { default as VaeComment } from 'vae-ui/comment'
-// // import { default as VaeColorPicker } from 'vae-ui/color-picker';
-// import { default as VaeConfigProvider } from 'vae-ui/config-provider'
-// import { default as VaeEmpty } from 'vae-ui/empty'
-// import { default as VaeResult } from 'vae-ui/result'
-// import { default as VaeDescriptions } from 'vae-ui/descriptions'
-// import { default as VaePageHeader } from 'vae-ui/page-header'
-// import { default as VaeSpace } from 'vae-ui/space'
-
-const components = [
-	// Affix,
-	// Anchor,
-	// AutoComplete,
-	// Alert,
-	// Avatar,
-	// BackTop,
-	// Badge,
-	// Breadcrumb,
-	VaeButton
-	// Calendar,
-	// Card,
-	// Collapse,
-	// Carousel,
-	// Cascader,
-	// Checkbox,
-	// Col,
-	// DatePicker,
-	// Divider,
-	// Dropdown,
-	// Form,
-	// Icon,
-	// Input,
-	// InputNumber,
-	// Layout,
-	// List,
-	// LocaleProvider,
-	// Menu,
-	// Mentions,
-	// Modal,
-	// Pagination,
-	// Popconfirm,
-	// Popover,
-	// Progress,
-	// Radio,
-	// Rate,
-	// Row,
-	// Select,
-	// Slider,
-	// Spin,
-	// Statistic,
-	// Steps,
-	// Switch,
-	// Table,
-	// Transfer,
-	// Tree,
-	// TreeSelect,
-	// Tabs,
-	// Tag,
-	// TimePicker,
-	// Timeline,
-	// Tooltip,
-	// Upload,
-	// Drawer,
-	// Skeleton,
-	// Comment,
-	// // ColorPicker,
-	// ConfigProvider,
-	// Empty,
-	// Result,
-	// Descriptions,
-	// PageHeader,
-	// Space
-]
-
-const install = function (app: App) {
-	components.forEach((component: any) => {
-		app.use(component)
-	})
-	// app.config.globalProperties.$message = message
-	// app.config.globalProperties.$notification = notification
-	// app.config.globalProperties.$info = Modal.info
-	// app.config.globalProperties.$success = Modal.success
-	// app.config.globalProperties.$error = Modal.error
-	// app.config.globalProperties.$warning = Modal.warning
-	// app.config.globalProperties.$confirm = Modal.confirm
-	// app.config.globalProperties.$destroyAll = Modal.destroyAll
-	return app
-}
+import type { App } from 'vue'
+// import VaeAlert from 'vae-ui/alert'
+// import VaeAvatar from 'vae-ui/avatar'
+// import VaeAutocomplete from 'vae-ui/autocomplete'
+// import VaeBacktop from 'vae-ui/backtop'
+import VaeButton from 'vae-ui/button'
+// import VaeBadge from 'vae-ui/badge'
+// import VaeCard from 'vae-ui/card'
+// import VaeCheckbox from 'vae-ui/checkbox'
+// import VaeDropdown from 'vae-ui/dropdown'
+// import VaeTag from 'vae-ui/tag'
+// import VaeLayout from 'vae-ui/layout'
+// import VaeDivider from 'vae-ui/divider'
+// import VaeCarousel from 'vae-ui/carousel'
+// import VaeTimeline from 'vae-ui/timeline'
+// import VaeProgress from 'vae-ui/progress'
+// import VaeBreadcrumb from 'vae-ui/breadcrumb'
+// import VaeIcon from 'vae-ui/icon'
+// import VaeImage from 'vae-ui/image'
+// import VaeLink from 'vae-ui/link'
+// import VaeRate from 'vae-ui/rate'
+// import VaeSwitch from 'vae-ui/switch'
+// import VaeContainer from 'vae-ui/container'
+// import VaeNotification from 'vae-ui/notification'
+// import VaePageHeader from 'vae-ui/page-header'
+// import VaeRadio from 'vae-ui/radio'
+// import VaeScrollBar from 'vae-ui/scrollbar'
+// import VaeSteps from 'vae-ui/steps'
+// import VaeCollapse from 'vae-ui/collapse'
+// import VaePopper from 'vae-ui/popper'
+// import VaeTimePicker from 'vae-ui/time-picker'
+// import VaeDatePicker from 'vae-ui/date-picker'
+// import VaeTabs from 'vae-ui/tabs'
+// import VaeTooltip from 'vae-ui/tooltip'
+// import VaeSlider from 'vae-ui/slider'
+// import VaeInput from 'vae-ui/input'
+// import VaeLoading from 'vae-ui/loading'
+// import VaeTransfer from 'vae-ui/transfer'
+// import VaeDialog from 'vae-ui/dialog'
+// import VaeCalendar from 'vae-ui/calendar'
+// import VaeInfiniteScroll from 'vae-ui/infinite-scroll'
+// import VaeMessage from 'vae-ui/message'
+// import VaeDrawer from 'vae-ui/drawer'
+// import VaeTableInstall, {
+//   Table as VaeTable,
+//   TableColumn as VaeTableColumn,
+// } from 'vae-ui/table'
+// import VaePopconfirm from 'vae-ui/popconfirm'
+// import VaeForm from 'vae-ui/form'
+// import VaeUpload from 'vae-ui/upload'
+// import VaeTree from 'vae-ui/tree'
+// import VaeColorPicker from 'vae-ui/color-picker'
+// import VaeSelect from 'vae-ui/select'
+// import VaeTimeSelect from 'vae-ui/time-select'
+// import VaePagination from 'vae-ui/pagination'
+// import VaeMessageBox from 'vae-ui/message-box'
+// import VaeInputNumber from 'vae-ui/input-number'
+// import VaePopover from 'vae-ui/popover'
+// import VaeCascader from 'vae-ui/cascader'
+// import VaeCascaderPanel from 'vae-ui/cascader-panel'
+// import VaeCollapseTransition from 'vae-ui/transition'
+// import { use } from 'vae-ui/locale'
 
 export {
-	// version,
-	// install,
-	// message,
-	// notification,
-	// Affix,
-	// Anchor,
-	// AutoComplete,
-	// Alert,
-	// Avatar,
-	// BackTop,
-	// Badge,
-	// Breadcrumb,
-	VaeButton
-	// Calendar,
-	// Card,
-	// Collapse,
-	// Carousel,
-	// Cascader,
-	// Checkbox,
-	// Col,
-	// DatePicker,
-	// Divider,
-	// Dropdown,
-	// Form,
-	// Icon,
-	// Input,
-	// InputNumber,
-	// Layout,
-	// List,
-	// LocaleProvider,
-	// Menu,
-	// Mentions,
-	// Modal,
-	// Pagination,
-	// Popconfirm,
-	// Popover,
-	// Progress,
-	// Radio,
-	// Rate,
-	// Row,
-	// Select,
-	// Slider,
-	// Spin,
-	// Statistic,
-	// Steps,
-	// Switch,
-	// Table,
-	// Transfer,
-	// Tree,
-	// TreeSelect,
-	// Tabs,
-	// Tag,
-	// TimePicker,
-	// Timeline,
-	// Tooltip,
-	// Upload,
-	// Drawer,
-	// Skeleton,
-	// Comment,
-	// // ColorPicker,
-	// ConfigProvider,
-	// Empty,
-	// Result,
-	// Descriptions,
-	// PageHeader,
-	// Space
+	// VaeAlert,
+	// VaeAvatar,
+	// VaeAutocomplete,
+	// VaeBacktop,
+	// VaeLayout,
+	VaeButton,
+	// VaeBadge,
+	// VaeCard,
+	// VaeCheckbox,
+	// VaeDivider,
+	// VaeDropdown,
+	// VaeTag,
+	// VaeCarousel,
+	// VaeTimeline,
+	// VaeProgress,
+	// VaeBreadcrumb,
+	// VaeIcon,
+	// VaeImage,
+	// VaeLink,
+	// VaeRate,
+	// VaeSwitch,
+	// VaeContainer,
+	// VaeNotification,
+	// VaePageHeader,
+	// VaeScrollBar,
+	// VaeSteps,
+	// VaeRadio,
+	// VaeCollapse,
+	// VaeTimePicker,
+	// VaeDatePicker,
+	// VaeTabs,
+	// VaeTooltip,
+	// VaeSlider,
+	// VaeInput,
+	// VaeLoading,
+	// VaeTransfer,
+	// VaeDialog,
+	// VaeCalendar,
+	// VaeInfiniteScroll,
+	// VaeMessage,
+	// VaeDrawer,
+	// VaeTable,
+	// VaeTableColumn,
+	// VaePopconfirm,
+	// VaeForm,
+	// VaeUpload,
+	// VaeTree,
+	// VaeColorPicker,
+	// VaeSelect,
+	// VaeTimeSelect,
+	// VaePagination,
+	// VaeMessageBox,
+	// VaeInputNumber,
+	// VaePopover,
+	// VaeCascader,
+	// VaeCascaderPanel,
+	// VaeCollapseTransition
 }
 
-export default {
-	// version,
+interface InstallOptions {
+	size: ComponentSize
+	zIndex: number
+	locale?: any
+}
+
+const defaultInstallOpt = {
+	size: '' as ComponentSize,
+	zIndex: 2000
+}
+
+const install = (app: App, opt: InstallOptions = defaultInstallOpt): void => {
+	// VaeAlert(app)
+	// VaeAvatar(app)
+	// VaeAutocomplete(app)
+	// VaeBacktop(app)
+	VaeButton(app)
+	// VaeBadge(app)
+	// VaeCard(app)
+	// VaeCheckbox(app)
+	// VaeDropdown(app)
+	// VaeTag(app)
+	// VaeLayout(app)
+	// VaeDivider(app)
+	// VaeCarousel(app)
+	// VaeTimeline(app)
+	// VaeProgress(app)
+	// VaeBreadcrumb(app)
+	// VaeIcon(app)
+	// VaeImage(app)
+	// VaeLink(app)
+	// VaeRate(app)
+	// VaeSwitch(app)
+	// VaeContainer(app)
+	// VaeNotification(app)
+	// VaePageHeader(app)
+	// VaeScrollBar(app)
+	// VaeSteps(app)
+	// VaeRadio(app)
+	// VaeCollapse(app)
+	// VaePopper(app)
+	// VaeTimePicker(app)
+	// VaeDatePicker(app)
+	// VaeTabs(app)
+	// VaeTooltip(app)
+	// VaeSlider(app)
+	// VaeInput(app)
+	// VaeLoading(app)
+	// VaeTransfer(app)
+	// VaeDialog(app)
+	// VaeCalendar(app)
+	// VaeInfiniteScroll(app)
+	// VaeMessage(app)
+	// VaeMessageBox(app)
+	// VaeDrawer(app)
+	// VaeTableInstall(app)
+	// VaePopconfirm(app)
+	// VaeForm(app)
+	// VaeUpload(app)
+	// VaeTree(app)
+	// VaeColorPicker(app)
+	// VaeSelect(app)
+	// VaeTimeSelect(app)
+	// VaePagination(app)
+	// VaeInputNumber(app)
+	// VaePopover(app)
+	// VaeCascader(app)
+	// VaeCascaderPanel(app)
+	// VaeCollapseTransition(app)
+
+	// app.config.globalProperties.$ELEMENT = opt
+	// use(opt.locale)
+}
+
+const VaeUI = {
 	install
 }
+
+export default VaeUI

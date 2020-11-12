@@ -15,6 +15,7 @@ declare const props: {
 	loading: boolean
 }
 export default {
+	name: 'VaeButton',
 	props: {
 		theme: {
 			type: String,
