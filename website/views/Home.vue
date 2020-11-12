@@ -35,7 +35,6 @@
 					<p>每个组件的源代码都极其简洁</p>
 				</li>
 			</ul>
-			<VaeButton>哈哈哈</VaeButton>
 		</div>
 	</div>
 </template>
