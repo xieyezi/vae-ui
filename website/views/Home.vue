@@ -7,7 +7,7 @@
 				<h2>一个风格简约的 Vue3 UI 框架</h2>
 				<p class="actions">
 					<a href="https://github.com/xieyezi/vae-ui">GitHub</a>
-					<router-link to="/doc">开始</router-link>
+					<router-link to="/button">开始</router-link>
 				</p>
 			</div>
 		</div>

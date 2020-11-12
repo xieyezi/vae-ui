@@ -4,6 +4,12 @@
 		"module": "esnext",
 		"strict": false,
 		"jsx": "preserve",
-		"moduleResolution": "node"
-	}
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": "./",
+		"paths": {
+			"vae-ui/*": ["packages/*"]
+		}
+	},
+	"exclude": ["node_modules"]
 }
