@@ -1,5 +1,5 @@
 import type { App } from 'vue'
-// import VaeAlert from 'vae-ui/alert'
+import VaeAlert from 'vae-ui/message'
 // import VaeAvatar from 'vae-ui/avatar'
 // import VaeAutocomplete from 'vae-ui/autocomplete'
 // import VaeBacktop from 'vae-ui/backtop'
@@ -62,7 +62,7 @@ import VaeButton from 'vae-ui/button'
 // import { use } from 'vae-ui/locale'
 
 export {
-	// VaeAlert,
+	VaeAlert,
 	// VaeAvatar,
 	// VaeAutocomplete,
 	// VaeBacktop,
@@ -133,7 +133,7 @@ const defaultInstallOpt = {
 }
 
 const install = (app: App, opt: InstallOptions = defaultInstallOpt): void => {
-	// VaeAlert(app)
+	VaeAlert(app)
 	// VaeAvatar(app)
 	// VaeAutocomplete(app)
 	// VaeBacktop(app)
@@ -191,7 +191,7 @@ const install = (app: App, opt: InstallOptions = defaultInstallOpt): void => {
 	// VaeCascaderPanel(app)
 	// VaeCollapseTransition(app)
 
-	// app.config.globalProperties.$ELEMENT = opt
+	app.config.globalProperties.$ELEMENT = opt
 	// use(opt.locale)
 }
 

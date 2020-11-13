@@ -8,3 +8,6 @@ declare module '*.md' {
 	const str: string
 	export default str
 }
+declare type Indexable<T> = {
+	[key: string]: T
+}

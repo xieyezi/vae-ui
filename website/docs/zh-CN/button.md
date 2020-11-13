@@ -12,7 +12,8 @@
 <template>
 	<vae-button>你好</vae-button>
 	<vae-button theme="link">你好</vae-button>
-	<vae-button theme="text">你好</vae-button>
+	<vae-button theme="text">你好123</vae-button>
+	<vae-button theme="text" size="big">你好</vae-button>
 </template>
 ```
 

@@ -12,7 +12,12 @@ const router = createRouter({
 		{
 			path: '/button',
 			name: 'button',
-			component: async () => import('./docs/Button.zh-CN.md')
+			component: async () => import('./docs/zh-CN/button.md')
+		},
+		{
+			path: '/message',
+			name: 'message',
+			component: async () => import('./docs/zh-CN/message.md')
 		}
 	]
 })
