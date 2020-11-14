@@ -30,6 +30,7 @@
 		"eslint": "^7.13.0",
 		"eslint-plugin-vue": "^7.0.0-beta.4",
 		"husky": "^4.3.0",
+		"lint-staged": "^10.5.1",
 		"prettier": "^2.1.1",
 		"rollup-plugin-esbuild": "^2.5.0",
 		"rollup-plugin-scss": "^2.6.0",

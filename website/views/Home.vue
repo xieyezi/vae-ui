@@ -1,44 +1,42 @@
 <template>
-  <div>
-    <div class="topnavAndBanner">
-      <!-- <Topnav /> -->
-      <div class="banner">
-        <h1>Vae-UI</h1>
-        <h2>一个风格简约的 Vue3 UI 框架</h2>
-        <p class="actions">
-          <a href="https://github.com/xieyezi/vae-ui">GitHub</a>
-          <router-link to="/button">
-            开始
-          </router-link>
-        </p>
-      </div>
-    </div>
-    <div class="features">
-      <ul>
-        <li>
-          <svg>
-            <use xlink:href="#icon-vue" />
-          </svg>
-          <h3>基于 Vue 3</h3>
-          <p>使用了 Vue 3 Composition API + Vue3 Hooks</p>
-        </li>
-        <li>
-          <svg>
-            <use xlink:href="#icon-ts" />
-          </svg>
-          <h3>基于 TypeScript</h3>
-          <p>源代码采用 TypeScript 书写</p>
-        </li>
-        <li>
-          <svg>
-            <use xlink:href="#icon-light" />
-          </svg>
-          <h3>代码易读</h3>
-          <p>每个组件的源代码都极其简洁</p>
-        </li>
-      </ul>
-    </div>
-  </div>
+	<div>
+		<div class="topnavAndBanner">
+			<!-- <Topnav /> -->
+			<div class="banner">
+				<h1>Vae-UI</h1>
+				<h2>一个风格简约的 Vue3 UI 框架</h2>
+				<p class="actions">
+					<a href="https://github.com/xieyezi/vae-ui">GitHub</a>
+					<router-link to="/button"> 开始 </router-link>
+				</p>
+			</div>
+		</div>
+		<div class="features">
+			<ul>
+				<li>
+					<svg>
+						<use xlink:href="#icon-vue" />
+					</svg>
+					<h3>基于 Vue 3</h3>
+					<p>使用了 Vue 3 Composition API + Vue3 Hooks</p>
+				</li>
+				<li>
+					<svg>
+						<use xlink:href="#icon-ts" />
+					</svg>
+					<h3>基于 TypeScript</h3>
+					<p>源代码采用 TypeScript 书写</p>
+				</li>
+				<li>
+					<svg>
+						<use xlink:href="#icon-light" />
+					</svg>
+					<h3>代码易读</h3>
+					<p>每个组件的源代码都极其简洁</p>
+				</li>
+			</ul>
+		</div>
+	</div>
 </template>
 
 <script lang="ts">

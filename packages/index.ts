@@ -67,7 +67,7 @@ export {
 	// VaeAutocomplete,
 	// VaeBacktop,
 	// VaeLayout,
-	VaeButton,
+	VaeButton
 	// VaeBadge,
 	// VaeCard,
 	// VaeCheckbox,
