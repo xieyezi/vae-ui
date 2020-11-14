@@ -15,4 +15,9 @@ router.afterEach(() => {
 		menuVisible.value = false
 	}
 })
+
+export default {
+	name: 'App',
+	components: {}
+}
 </script>

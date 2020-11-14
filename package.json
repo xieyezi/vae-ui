@@ -7,8 +7,8 @@
 	"main": "dist/lib/vae.js",
 	"module": "dist/lib/vae.esm.js",
 	"scripts": {
-		"website:dev": "vite",
-		"build": "vite build",
+		"website-dev": "vite",
+		"website-build": "vite build",
 		"lint": "eslint packages --ext .js,.ts,.vue",
 		"lint-fix": "eslint packages --fix --ext .js,.ts,.vue ",
 		"format": "prettier --write \"packages/**/*.vue\" \"packages/**/*.ts\" \"website/**/*.vue\" \"website/**/*.ts\"",
