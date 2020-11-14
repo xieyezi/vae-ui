@@ -1,7 +1,7 @@
 <p align="center">
   <img width="300" src="https://i.loli.net/2020/11/12/v2rnIaSzwUkuN5y.png">
 </p>
-<p align="center" style="font-size:22px;color: #575757;">Vae UI - A Vue.js 3.0 UI library</p>
+<p align="center" style="font-size:22px; color: #575757;">Vae UI - A Vue.js 3.0 UI library</p>
 
 Language: English | [中文简体](https://github.com/xieyezi/vae-ui/blob/main/README-zh.md)
 

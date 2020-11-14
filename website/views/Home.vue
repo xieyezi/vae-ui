@@ -55,7 +55,7 @@ export default {
 .home-container {
 	color: #575757;
 	a {
-		color: #1675e0;
+		color: #ed635e;
 		text-decoration: none;
 	}
 }
