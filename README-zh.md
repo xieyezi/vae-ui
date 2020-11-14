@@ -1,5 +1,3 @@
-
-
 <p align="center">
   <img width="200px" src="https://i.loli.net/2020/11/12/v2rnIaSzwUkuN5y.png">
 </p>
@@ -17,7 +15,7 @@ Language: 中文简体 | [English](https://github.com/xieyezi/vae-ui)
 请在命令行输入以下命令
 
 ```bash
-$ yarn website-dev
+$ yarn website:dev
 ```
 
 这样你就能预览到所有组件。
