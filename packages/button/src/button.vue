@@ -1,8 +1,15 @@
 <template>
-	<button class="vae-button" :class="classes" :disabled="disabled">
-		<span v-if="loading" class="vae-loadingIndicator"></span>
-		<slot />
-	</button>
+  <button
+    class="vae-button"
+    :class="classes"
+    :disabled="disabled"
+  >
+    <span
+      v-if="loading"
+      class="vae-loadingIndicator"
+    />
+    <slot />
+  </button>
 </template>
 
 <script lang="ts" setup="props">

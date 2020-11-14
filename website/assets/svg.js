@@ -22,7 +22,7 @@
 	function s() {
 		h || ((h = !0), i())
 	}
-	;(l = function () {
+	(l = function () {
 		var t,
 			e,
 			l,
