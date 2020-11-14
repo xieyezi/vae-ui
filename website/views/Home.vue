@@ -1,142 +1,110 @@
 <template>
-	<div>
-		<div class="topnavAndBanner">
-			<!-- <Topnav /> -->
-			<div class="banner">
-				<h1>Vae-UI</h1>
-				<h2>一个风格简约的 Vue3 UI 框架</h2>
-				<p class="actions">
-					<a href="https://github.com/xieyezi/vae-ui">GitHub</a>
-					<router-link to="/button"> 开始 </router-link>
+	<div class="home-container">
+		<Topnav />
+		<div class="support">
+			<h3>
+				Black Lives Matter.
+				<a
+					href="https://support.eji.org/give/153413/#!/donation/checkout"
+					target="_blank"
+					rel="noopener noreferrer"
+					id="blm-link"
+				>
+					Support the Equal Justice Initiative.
+				</a>
+			</h3>
+		</div>
+		<section className="section">
+			<div class="left">
+				<h1 className="title">Vae UI</h1>
+				<p className="sub-title">一套 Vue3 的 UI 组件库，贴心的 UI 设计，友好的开发体验。</p>
+				<p className="home-page-badge-wrap">
+					<a href="https://www.npmjs.com/package/rsuite" target="_blank" rel="noopener noreferrer">
+						<img alt="npm" src="https://badge.fury.io/js/rsuite.svg" />
+					</a>
+					<a href="https://gitee.com/rsuite/rsuite" target="_blank" rel="noopener noreferrer">
+						<img src="https://gitee.com/rsuite/rsuite/badge/star.svg?theme=gvp" alt="star" />
+					</a>
+
+					<a href="https://github.com/rsuite/rsuite" target="_blank" rel="noopener noreferrer">
+						<img alt="GitHub stars" src="https://img.shields.io/github/stars/rsuite/rsuite?style=social" />
+					</a>
 				</p>
+				<div class="toolbar">
+					<vae-button>开始使用</vae-button>
+					<vae-button>组件</vae-button>
+				</div>
 			</div>
-		</div>
-		<div class="features">
-			<ul>
-				<li>
-					<svg>
-						<use xlink:href="#icon-vue" />
-					</svg>
-					<h3>基于 Vue 3</h3>
-					<p>使用了 Vue 3 Composition API + Vue3 Hooks</p>
-				</li>
-				<li>
-					<svg>
-						<use xlink:href="#icon-ts" />
-					</svg>
-					<h3>基于 TypeScript</h3>
-					<p>源代码采用 TypeScript 书写</p>
-				</li>
-				<li>
-					<svg>
-						<use xlink:href="#icon-light" />
-					</svg>
-					<h3>代码易读</h3>
-					<p>每个组件的源代码都极其简洁</p>
-				</li>
-			</ul>
-		</div>
+			<div class="right">
+				<img width="300" src="https://i.loli.net/2020/11/12/v2rnIaSzwUkuN5y.png" />
+			</div>
+		</section>
 	</div>
 </template>
 
 <script lang="ts">
+import Topnav from '../components/top-nav.vue'
 export default {
 	components: {
-		// Topnav
+		Topnav
 	}
 }
 </script>
 
 <style lang="scss" scoped>
-$green: #02bcb0;
-$border-radius: 4px;
-$color: #007974;
-
-.topnavAndBanner {
-	background: linear-gradient(145deg, rgba(162, 235, 230, 1) 0%, rgba(183, 233, 230, 1) 100%);
-	clip-path: ellipse(80% 60% at 50% 40%);
-}
-
-.features {
-	margin: 64px auto;
-	padding: 0 16px;
-
-	@media (min-width: 800px) {
-		width: 800px;
-
-		> ul {
-			> li {
-				width: 50%;
-			}
-		}
-	}
-
-	@media (min-width: 1200px) {
-		width: 1200px;
-
-		> ul {
-			> li {
-				width: 33.3333%;
-			}
-		}
-	}
-
-	> ul {
-		display: flex;
-		flex-wrap: wrap;
-
-		> li {
-			margin: 16px 0;
-			display: grid;
-			justify-content: start;
-			align-content: space-between;
-			grid-template-areas:
-				'icon title'
-				'icon text';
-			grid-template-columns: 80px auto;
-			grid-template-rows: 1fr auto;
-
-			> svg {
-				grid-area: icon;
-				width: 64px;
-				height: 64px;
-			}
-
-			> h3 {
-				grid-area: title;
-				font-size: 28px;
-			}
-
-			> p {
-				grid-area: text;
-			}
-		}
+.home-container {
+	color: #575757;
+	a {
+		color: #1675e0;
+		text-decoration: none;
 	}
 }
-
-.banner {
-	color: $color;
-	padding: 100px 0;
+.support {
+	margin-top: 30px;
+	margin-left: 10%;
+	padding: 20px;
+	background-color: #e9f5fe;
+	width: 50%;
+	border-radius: 6px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	font-size: 18px;
+	line-height: 24px;
+}
+.section {
+	margin: 128px 128px 0px 128px;
+	padding-left: 60px;
+	text-align: left;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-
-	> .actions {
-		padding: 8px 0;
-
-		a {
-			margin: 0 8px;
-			background: $green;
-			color: white;
-			display: inline-block;
-			padding: 8px 24px;
-			border-radius: $border-radius;
-
-			&:hover {
-				text-decoration: none;
+	justify-content: space-between;
+	.left {
+		width: 45%;
+		.title {
+			font-family: Raleway, Hiragino Sans GB, sans-serif;
+			font-weight: 700;
+			h1 {
+				font-size: 46px;
+				line-height: 62px;
 			}
 		}
+		.sub-title {
+			font-size: 22px;
+			margin: 20px 0;
+		}
+		.home-page-badge-wrap {
+			margin-top: 8px;
+			a {
+				margin-left: 10px;
+			}
+		}
+		.toolbar {
+			margin-top: 50px;
+		}
+	}
+	.right {
+		width: 50%;
+		// background-color: #111111;
+		text-align: center;
 	}
 }
 </style>

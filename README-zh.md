@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="200px" src="https://i.loli.net/2020/11/12/v2rnIaSzwUkuN5y.png">
+  <img width="300" src="https://i.loli.net/2020/11/12/v2rnIaSzwUkuN5y.png">
 </p>
 <p align="center">Vae-UI - 一个风格简约的 Vue3 UI 组件库</p>
 

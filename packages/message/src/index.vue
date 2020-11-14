@@ -15,7 +15,7 @@
 			@mouseenter="clearTimer"
 			@mouseleave="startTimer"
 		>
-			<i v-if="type || iconClass" :class="[typeClass, iconClass]" />
+			<i v-if="type || iconClass" :class="[typeClass, iconClass]"></i>
 			<slot>
 				<p v-if="!dangerouslyUseHTMLString" class="el-message__content">
 					{{ message }}
@@ -24,7 +24,7 @@
 				<!--  eslint-disable-next-line -->
 				<p v-else class="el-message__content" v-html="message"></p>
 			</slot>
-			<div v-if="showClose" class="el-message__closeBtn el-icon-close" @click.stop="close" />
+			<div v-if="showClose" class="el-message__closeBtn el-icon-close" @click.stop="close"></div>
 		</div>
 	</transition>
 </template>

@@ -1,7 +1,7 @@
 <template>
 	<button class="vae-button" :class="classes" :disabled="disabled">
-		<span v-if="loading" class="vae-loadingIndicator" />
-		<slot />
+		<span v-if="loading" class="vae-loadingIndicator"></span>
+		<slot></slot>
 	</button>
 </template>
 

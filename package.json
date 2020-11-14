@@ -55,13 +55,11 @@
 	},
 	"lint-staged": {
 		"*.{json,css,md}": [
-			"npm run format",
-			"git add"
+			"npm run format"
 		],
 		"*.{js,ts,vue}": [
 			"npm run lint",
-			"npm run format",
-			"git add"
+			"npm run format"
 		]
 	}
 }
