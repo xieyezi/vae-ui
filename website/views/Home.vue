@@ -31,8 +31,8 @@
 					</a>
 				</p>
 				<div class="toolbar">
-					<vae-button level="main">开始使用</vae-button>
-					<vae-button>组件</vae-button>
+					<vae-button level="main" @click="tomessage">开始使用</vae-button>
+					<vae-button @click="tomessage">组件</vae-button>
 				</div>
 			</div>
 			<div class="right">
@@ -52,9 +52,22 @@
 
 <script lang="ts">
 import Topnav from '../components/top-nav.vue'
+import { useRouter } from 'vue-router'
+
 export default {
 	components: {
 		Topnav
+	},
+	setup() {
+		const router = useRouter()
+
+		const tomessage = () => {
+			router.push('/message')
+		}
+
+		return {
+			tomessage
+		}
 	}
 }
 </script>
