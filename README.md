@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300" src="https://i.loli.net/2020/11/15/sxeItRC7f86vZPi.png " />
+  <img width="300" src="https://i.loli.net/2020/11/15/sxeItRC7f86vZPi.png" />
 </p>
 <p align="center" style="font-size:22px; color: #575757;">Vae UI - A Vue.js 3.0 UI library</p>
 
