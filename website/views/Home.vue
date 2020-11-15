@@ -19,26 +19,34 @@
 				<h1 className="title">Vae UI</h1>
 				<p className="sub-title">一套 Vue3 的 UI 组件库，贴心的 UI 设计，友好的开发体验。</p>
 				<p className="home-page-badge-wrap">
-					<a href="https://www.npmjs.com/package/rsuite" target="_blank" rel="noopener noreferrer">
-						<img alt="npm" src="https://badge.fury.io/js/rsuite.svg" />
+					<a href="https://github.com/xieyezi/vae-ui" target="_blank" rel="noopener noreferrer">
+						<img alt="npm" src="https://img.shields.io/badge/vue3-composition--api-brightgreen" />
 					</a>
-					<a href="https://gitee.com/rsuite/rsuite" target="_blank" rel="noopener noreferrer">
-						<img src="https://gitee.com/rsuite/rsuite/badge/star.svg?theme=gvp" alt="star" />
+					<a href="https://github.com/xieyezi/vae-ui" target="_blank" rel="noopener noreferrer">
+						<img src="https://img.shields.io/badge/typescript-vue-orange" alt="star" />
 					</a>
 
-					<a href="https://github.com/rsuite/rsuite" target="_blank" rel="noopener noreferrer">
-						<img alt="GitHub stars" src="https://img.shields.io/github/stars/rsuite/rsuite?style=social" />
+					<a href="https://github.com/xieyezi/vae-ui" target="_blank" rel="noopener noreferrer">
+						<img src="https://img.shields.io/github/stars/xieyezi/vae-ui?style=social" alt="star" />
 					</a>
 				</p>
 				<div class="toolbar">
-					<vae-button>开始使用</vae-button>
+					<vae-button level="main">开始使用</vae-button>
 					<vae-button>组件</vae-button>
 				</div>
 			</div>
 			<div class="right">
-				<img width="300" src="https://i.loli.net/2020/11/12/v2rnIaSzwUkuN5y.png" />
+				<img width="400" src="https://i.loli.net/2020/11/15/sxeItRC7f86vZPi.png " />
 			</div>
 		</section>
+		<footer>
+			<div>
+				Copyright 2020 - present xieyezi All Rights Reserved
+				<span style="margin-left: 30px; margin-right: 10px">联系我:</span>
+				<a href="https://github.com/xieyezi" class="highlight-name" target="_blank">Github</a>
+				<a href="https://juejin.im/user/5c1cfe85e51d4511851c478d" class="highlight-name" target="_blank">掘金</a>
+			</div>
+		</footer>
 	</div>
 </template>
 
@@ -55,7 +63,7 @@ export default {
 .home-container {
 	color: #575757;
 	a {
-		color: #ed635e;
+		color: #56b88d;
 		text-decoration: none;
 	}
 }
@@ -104,7 +112,35 @@ export default {
 	.right {
 		width: 50%;
 		// background-color: #111111;
-		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
+}
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 8%;
+	padding: 20px 0;
+	background: rgba(7, 17, 27, 0.2);
+	font-size: 12px;
+	color: #fff;
+	margin: 0 auto;
+	font-weight: 400;
+	text-align: center;
+}
+.highlight-name {
+	color: #0e90d2;
+	font-size: 14px;
+	font-weight: 600;
+	transition: all 0.3s;
+	margin-right: 10px;
+}
+.highlight-name:hover {
+	color: #ffffff;
+}
+footer a {
+	text-decoration: none;
 }
 </style>
