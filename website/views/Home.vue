@@ -42,7 +42,7 @@
 		<footer>
 			<div>
 				Copyright 2020 - present xieyezi All Rights Reserved
-				<span style="margin-left: 30px; margin-right: 10px">联系我:</span>
+				<span style="margin-left: 30px; margin-right: 10px">联系我们:</span>
 				<a href="https://github.com/xieyezi" class="highlight-name" target="_blank">Github</a>
 				<a href="https://juejin.im/user/5c1cfe85e51d4511851c478d" class="highlight-name" target="_blank">掘金</a>
 			</div>
