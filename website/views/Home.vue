@@ -17,7 +17,7 @@
 		<section className="section">
 			<div class="left">
 				<h1 className="title">Vae UI</h1>
-				<p className="sub-title">一套 Vue3 的 UI 组件库，贴心的 UI 设计，友好的开发体验。</p>
+				<p className="sub-title">一套 Vue3 的 UI 组件库，贴心的 UI 设计，友好的开发体验。</p>
 				<p className="home-page-badge-wrap">
 					<a href="https://github.com/xieyezi/vae-ui" target="_blank" rel="noopener noreferrer">
 						<img alt="npm" src="https://img.shields.io/badge/vue3-composition--api-brightgreen" />
