@@ -8,7 +8,7 @@ Language: 中文简体 | [English](https://github.com/xieyezi/vae-ui)
 - 💪 Vue 3.0 Composition API
 - 🔥 Written in TypeScript
 
-该项目仍在紧张开发中。欢迎加入我们，请提交 `pull request`。
+该项目仍在紧张开发中。欢迎小伙伴们加入我们，请提交 `pull request`。
 
 ### 预览
 
