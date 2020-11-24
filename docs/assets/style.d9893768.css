@@ -7,14 +7,14 @@
 	justify-content: space-around;
 	width: 200px;
 }
-.home-container[data-v-44f45d8e] {
+.home-container[data-v-4dfc3fef] {
 	color: #575757;
 }
-.home-container a[data-v-44f45d8e] {
+.home-container a[data-v-4dfc3fef] {
 	color: #56b88d;
 	text-decoration: none;
 }
-.support[data-v-44f45d8e] {
+.support[data-v-4dfc3fef] {
 	margin-top: 30px;
 	margin-left: 10%;
 	padding: 20px;
@@ -24,44 +24,44 @@
 	font-size: 18px;
 	line-height: 24px;
 }
-.section[data-v-44f45d8e] {
+.section[data-v-4dfc3fef] {
 	margin: 128px 128px 0;
 	padding-left: 60px;
 	text-align: left;
 	display: flex;
 	justify-content: space-between;
 }
-.section .left[data-v-44f45d8e] {
+.section .left[data-v-4dfc3fef] {
 	width: 45%;
 }
-.section .left .title[data-v-44f45d8e] {
+.section .left .title[data-v-4dfc3fef] {
 	font-family: Raleway, Hiragino Sans GB, sans-serif;
 	font-weight: 700;
 }
-.section .left .title h1[data-v-44f45d8e] {
+.section .left .title h1[data-v-4dfc3fef] {
 	font-size: 46px;
 	line-height: 62px;
 }
-.section .left .sub-title[data-v-44f45d8e] {
+.section .left .sub-title[data-v-4dfc3fef] {
 	font-size: 22px;
 	margin: 20px 0;
 }
-.section .left .home-page-badge-wrap[data-v-44f45d8e] {
+.section .left .home-page-badge-wrap[data-v-4dfc3fef] {
 	margin-top: 8px;
 }
-.section .left .home-page-badge-wrap a[data-v-44f45d8e] {
+.section .left .home-page-badge-wrap a[data-v-4dfc3fef] {
 	margin-left: 10px;
 }
-.section .left .toolbar[data-v-44f45d8e] {
+.section .left .toolbar[data-v-4dfc3fef] {
 	margin-top: 50px;
 }
-.section .right[data-v-44f45d8e] {
+.section .right[data-v-4dfc3fef] {
 	width: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-footer[data-v-44f45d8e] {
+footer[data-v-4dfc3fef] {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -74,17 +74,17 @@ footer[data-v-44f45d8e] {
 	font-weight: 400;
 	text-align: center;
 }
-.highlight-name[data-v-44f45d8e] {
+.highlight-name[data-v-4dfc3fef] {
 	color: #0e90d2;
 	font-size: 14px;
 	font-weight: 600;
 	transition: 0.3s;
 	margin-right: 10px;
 }
-.highlight-name[data-v-44f45d8e]:hover {
+.highlight-name[data-v-4dfc3fef]:hover {
 	color: #fff;
 }
-footer a[data-v-44f45d8e] {
+footer a[data-v-4dfc3fef] {
 	text-decoration: none;
 }
 .vae-button {
@@ -352,8 +352,8 @@ body {
 }
 @font-face {
 	font-family: element-icons;
-	src: url(/_assets/element-icons.0bf2ea75.woff) format('woff'),
-		url(/_assets/element-icons.a8267d41.ttf) format('truetype');
+	src: url(./assets/element-icons.0bf2ea75.woff) format('woff'),
+		url(./assets/element-icons.a8267d41.ttf) format('truetype');
 	font-weight: 400;
 	font-display: auto;
 	font-style: normal;

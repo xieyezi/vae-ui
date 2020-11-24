@@ -3459,8 +3459,8 @@ var Ts = {
 		}
 	}
 }
-const Ms = kt('data-v-44f45d8e')
-St('data-v-44f45d8e')
+const Ms = kt('data-v-4dfc3fef')
+St('data-v-4dfc3fef')
 const Ls = { class: 'home-container' },
 	$s = Vt(
 		'div',
@@ -3517,7 +3517,7 @@ const Ls = { class: 'home-container' },
 		[
 			Vt('div', null, [
 				qt(' Copyright 2020 - present xieyezi All Rights Reserved '),
-				Vt('span', { style: { 'margin-left': '30px', 'margin-right': '10px' } }, '联系我:'),
+				Vt('span', { style: { 'margin-left': '30px', 'margin-right': '10px' } }, '联系我们:'),
 				Vt('a', { href: 'https://github.com/xieyezi', class: 'highlight-name', target: '_blank' }, 'Github'),
 				Vt(
 					'a',
@@ -3553,7 +3553,7 @@ const Ws = Ms(function (e, t, n, o, r, s) {
 		])
 	)
 })
-;(Ts.render = Ws), (Ts.__scopeId = 'data-v-44f45d8e')
+;(Ts.render = Ws), (Ts.__scopeId = 'data-v-4dfc3fef')
 var Ks
 const Gs = (function (e) {
 	const t = Wr(e.routes, e)
@@ -3815,8 +3815,8 @@ const Gs = (function (e) {
 	history: ((Ks = location.host ? Ks || location.pathname : '').indexOf('#') < 0 && (Ks += '#'), Pr(Ks)),
 	routes: [
 		{ path: '/', component: Ts },
-		{ path: '/button', name: 'button', component: async () => import('./button.66656b43.js') },
-		{ path: '/message', name: 'message', component: async () => import('./message.e52c6a67.js') }
+		{ path: '/button', name: 'button', component: async () => import('./button.d78604c5.js') },
+		{ path: '/message', name: 'message', component: async () => import('./message.27b08159.js') }
 	]
 })
 Gs.afterEach(() => {})

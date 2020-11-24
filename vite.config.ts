@@ -9,6 +9,8 @@ const options: VueDocPluginOptions = {
 }
 
 const config: UserConfig = {
+	base: './',
+	assetsDir: 'assets',
 	alias: {
 		'/vae-ui/': path.resolve(__dirname, './packages')
 	},
