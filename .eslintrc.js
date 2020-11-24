@@ -19,6 +19,10 @@ module.exports = {
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
 		'@typescript-eslint/no-explicit-any': 'off',
 		// vue
-		'vue/no-parsing-error': 'off'
+		'vue/no-parsing-error': 'off',
+		'vue/html-indent': 'off',
+		'vue/html-self-closing': 'off',
+		'vue/max-attributes-per-line': 'off',
+		'vue/singleline-html-element-content-newline': 'off'
 	}
 }

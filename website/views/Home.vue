@@ -5,10 +5,10 @@
 			<h3>
 				Black Lives Matter.
 				<a
+					id="blm-link"
 					href="https://support.eji.org/give/153413/#!/donation/checkout"
 					target="_blank"
 					rel="noopener noreferrer"
-					id="blm-link"
 				>
 					Support the Equal Justice Initiative.
 				</a>
@@ -53,8 +53,9 @@
 <script lang="ts">
 import Topnav from '../components/top-nav.vue'
 import { useRouter } from 'vue-router'
+import { defineComponent } from 'vue'
 
-export default {
+export default defineComponent({
 	components: {
 		Topnav
 	},
@@ -69,7 +70,7 @@ export default {
 			toMessage
 		}
 	}
-}
+})
 </script>
 
 <style lang="scss" scoped>
