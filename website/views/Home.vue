@@ -31,8 +31,8 @@
 					</a>
 				</p>
 				<div class="toolbar">
-					<vae-button level="main" @click="tomessage">开始使用</vae-button>
-					<vae-button @click="tomessage">组件</vae-button>
+					<vae-button level="main" @click="toMessage">开始使用</vae-button>
+					<vae-button @click="toMessage">组件</vae-button>
 				</div>
 			</div>
 			<div class="right">
@@ -61,12 +61,12 @@ export default {
 	setup() {
 		const router = useRouter()
 
-		const tomessage = () => {
+		const toMessage = () => {
 			router.push('/message')
 		}
 
 		return {
-			tomessage
+			toMessage
 		}
 	}
 }
