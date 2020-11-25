@@ -5,6 +5,8 @@ import VaeAlert from 'vae-ui/alert'
 // import VaeBacktop from 'vae-ui/backtop'
 import VaeButton from 'vae-ui/button'
 import VaeFooter from 'vae-ui/footer'
+import VaeHeader from 'vae-ui/header'
+
 // import VaeBadge from 'vae-ui/badge'
 // import VaeCard from 'vae-ui/card'
 // import VaeCheckbox from 'vae-ui/checkbox'
@@ -69,7 +71,8 @@ export {
 	// VaeBacktop,
 	// VaeLayout,
 	VaeButton,
-	VaeFooter
+	VaeFooter,
+	VaeHeader
 	// VaeBadge,
 	// VaeCard,
 	// VaeCheckbox,
@@ -141,6 +144,7 @@ const install = (app: App, opt: InstallOptions = defaultInstallOpt): void => {
 	// VaeBacktop(app)
 	VaeButton(app)
 	VaeFooter(app)
+	VaeHeader(app)
 	// VaeBadge(app)
 	// VaeCard(app)
 	// VaeCheckbox(app)
