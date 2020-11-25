@@ -60,9 +60,11 @@ export default defineComponent({
 	},
 	setup() {
 		const router = useRouter()
+
 		const toMessage = () => {
-			router.push('/alert')
+			router.push('/message')
 		}
+
 		return {
 			toMessage
 		}
