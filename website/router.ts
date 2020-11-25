@@ -18,6 +18,11 @@ const router = createRouter({
 			path: '/message',
 			name: 'message',
 			component: async () => import('./docs/zh-CN/message.md')
+		},
+		{
+			path: '/alert',
+			name: 'alert',
+			component: async () => import('./docs/zh-CN/alert.md')
 		}
 	]
 })

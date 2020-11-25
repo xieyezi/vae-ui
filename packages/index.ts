@@ -1,5 +1,5 @@
 import type { App } from 'vue'
-import VaeAlert from 'vae-ui/message'
+import VaeAlert from 'vae-ui/alert'
 // import VaeAvatar from 'vae-ui/avatar'
 // import VaeAutocomplete from 'vae-ui/autocomplete'
 // import VaeBacktop from 'vae-ui/backtop'

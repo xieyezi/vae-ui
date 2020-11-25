@@ -41,92 +41,95 @@ export default {
 
 ```vue
 <template>
-<vae-button :plain="true" @click="open2">成功</vae-button>
-<vae-button :plain="true" @click="open3">警告</vae-button>
-<vae-button :plain="true" @click="open1">消息</vae-button>
-<vae-button :plain="true" @click="open4">错误</vae-button>
+	<vae-button :plain="true" @click="open2">成功</vae-button>
+	<vae-button :plain="true" @click="open3">警告</vae-button>
+	<vae-button :plain="true" @click="open1">消息</vae-button>
+	<vae-button :plain="true" @click="open4">错误</vae-button>
 </template>
 
 <script>
-  export default {
-    methods: {
-      open1() {
-        this.$message('这是一条消息提示');
-      },
-      open2() {
-        this.$message({
-          message: '恭喜你，这是一条成功消息',
-          type: 'success'
-        });
-      },
+export default {
+	methods: {
+		open1() {
+			this.$message('这是一条消息提示')
+		},
+		open2() {
+			this.$message({
+				message: '恭喜你，这是一条成功消息',
+				type: 'success'
+			})
+		},
 
-      open3() {
-        this.$message({
-          message: '警告哦，这是一条警告消息',
-          type: 'warning'
-        });
-      },
+		open3() {
+			this.$message({
+				message: '警告哦，这是一条警告消息',
+				type: 'warning'
+			})
+		},
 
-      open4() {
-        this.$message.error('错了哦，这是一条错误消息');
-      }
-    }
-  }
+		open4() {
+			this.$message({
+				showClose: true,
+				message: '错了哦，这是一条错误消息',
+				type: 'error'
+			})
+		}
+	}
+}
 </script>
-````
-
+```
 
 ### 可关闭
 
 可以添加关闭按钮。
 
- 默认的 Message 是不可以被人工关闭的，如果需要可手动关闭的 Message，可以使用`showClose`字段。此外，和 Notification 一样，Message 拥有可控的`duration`，设置`0`为不会被自动关闭，默认为 3000 毫秒。
+默认的 Message 是不可以被人工关闭的，如果需要可手动关闭的 Message，可以使用`showClose`字段。此外，和 Notification 一样，Message 拥有可控的`duration`，设置`0`为不会被自动关闭，默认为 3000 毫秒。
 
 ```vue
 <template>
-  <vae-button :plain="true" @click="open1">消息</vae-button>
-  <vae-button :plain="true" @click="open2">成功</vae-button>
-  <vae-button :plain="true" @click="open3">警告</vae-button>
-  <vae-button :plain="true" @click="open4">错误</vae-button>
+	<vae-button :plain="true" @click="open1">消息</vae-button>
+	<vae-button :plain="true" @click="open2">成功</vae-button>
+	<vae-button :plain="true" @click="open3">警告</vae-button>
+	<vae-button :plain="true" @click="open4">错误</vae-button>
 </template>
 
 <script>
-  export default {
-    methods: {
-      open1() {
-        this.$message({
-          showClose: true,
-          message: '这是一条消息提示'
-        });
-      },
+export default {
+	methods: {
+		open1() {
+			this.$message({
+				showClose: true,
+				message: '这是一条消息提示'
+			})
+		},
 
-      open2() {
-        this.$message({
-          showClose: true,
-          message: '恭喜你，这是一条成功消息',
-          type: 'success'
-        });
-      },
+		open2() {
+			this.$message({
+				showClose: true,
+				message: '恭喜你，这是一条成功消息',
+				type: 'success'
+			})
+		},
 
-      open3() {
-        this.$message({
-          showClose: true,
-          message: '警告哦，这是一条警告消息',
-          type: 'warning'
-        });
-      },
+		open3() {
+			this.$message({
+				showClose: true,
+				message: '警告哦，这是一条警告消息',
+				type: 'warning'
+			})
+		},
 
-      open4() {
-        this.$message({
-          showClose: true,
-          message: '错了哦，这是一条错误消息',
-          type: 'error'
-        });
-      }
-    }
-  }
+		open4() {
+			this.$message({
+				showClose: true,
+				message: '错了哦，这是一条错误消息',
+				type: 'error'
+			})
+		}
+	}
+}
 </script>
-````
+```
 
 ### 文字居中
 
