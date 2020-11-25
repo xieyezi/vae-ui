@@ -1,11 +1,10 @@
 import type { App } from 'vue'
 import VaeAlert from 'vae-ui/alert'
+import VaeMessage from 'vae-ui/message'
 // import VaeAvatar from 'vae-ui/avatar'
 // import VaeAutocomplete from 'vae-ui/autocomplete'
 // import VaeBacktop from 'vae-ui/backtop'
 import VaeButton from 'vae-ui/button'
-import VaeFooter from 'vae-ui/footer'
-import VaeHeader from 'vae-ui/header'
 
 // import VaeBadge from 'vae-ui/badge'
 // import VaeCard from 'vae-ui/card'
@@ -66,13 +65,12 @@ import VaeHeader from 'vae-ui/header'
 
 export {
 	VaeAlert,
+	VaeMessage,
 	// VaeAvatar,
 	// VaeAutocomplete,
 	// VaeBacktop,
 	// VaeLayout,
-	VaeButton,
-	VaeFooter,
-	VaeHeader
+	VaeButton
 	// VaeBadge,
 	// VaeCard,
 	// VaeCheckbox,
@@ -143,8 +141,6 @@ const install = (app: App, opt: InstallOptions = defaultInstallOpt): void => {
 	// VaeAutocomplete(app)
 	// VaeBacktop(app)
 	VaeButton(app)
-	VaeFooter(app)
-	VaeHeader(app)
 	// VaeBadge(app)
 	// VaeCard(app)
 	// VaeCheckbox(app)
