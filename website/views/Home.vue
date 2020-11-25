@@ -122,7 +122,6 @@ export default defineComponent({
 	}
 	.right {
 		width: 50%;
-		// background-color: #111111;
 		display: flex;
 		align-items: center;
 		justify-content: center;

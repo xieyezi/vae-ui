@@ -4,6 +4,7 @@ import VaeAlert from 'vae-ui/alert'
 // import VaeAutocomplete from 'vae-ui/autocomplete'
 // import VaeBacktop from 'vae-ui/backtop'
 import VaeButton from 'vae-ui/button'
+import VaeFooter from 'vae-ui/footer'
 // import VaeBadge from 'vae-ui/badge'
 // import VaeCard from 'vae-ui/card'
 // import VaeCheckbox from 'vae-ui/checkbox'
@@ -67,7 +68,8 @@ export {
 	// VaeAutocomplete,
 	// VaeBacktop,
 	// VaeLayout,
-	VaeButton
+	VaeButton,
+	VaeFooter
 	// VaeBadge,
 	// VaeCard,
 	// VaeCheckbox,
@@ -138,6 +140,7 @@ const install = (app: App, opt: InstallOptions = defaultInstallOpt): void => {
 	// VaeAutocomplete(app)
 	// VaeBacktop(app)
 	VaeButton(app)
+	VaeFooter(app)
 	// VaeBadge(app)
 	// VaeCard(app)
 	// VaeCheckbox(app)

@@ -22,11 +22,8 @@
 <script lang="ts">
 import { defineComponent, computed, ref, PropType } from 'vue'
 const TYPE_CLASSES_MAP = { success: 'el-icon-success', warning: 'el-icon-warning', error: 'el-icon-error' }
-// eslint-ignore-nextline
 export default defineComponent({
-	// eslint-ignore-nextline
-	// eslint-ignore-nextline
-	name: 'VaeAlert', // eslint-ignore-nextline
+	name: 'VaeAlert',
 	props: {
 		title: {
 			type: String,
